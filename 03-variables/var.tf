@@ -45,10 +45,19 @@ output "This_is_the_output_of_the_z_map_with_Index" {
 }
 
 #We can declare empty variable but data can be sent froma file, those files ar tfvars
-
+#this is how you pass the file in the command line
+#>>> terraform apply -var-file=dev.tfvars -auto-approve
 # Declare a variable WITHOUT a value
 variable "env" {}
 
 output "catching_the_output_variable_from_TFVARS_file" {
   value = var.env
+}
+
+#demo of XXX.auto.tfvars file
+
+variable "common" {}
+
+output "catching_the_output_variable_from_XXX_AUTO_TFVARS_file" {
+  value = var.common
 }
