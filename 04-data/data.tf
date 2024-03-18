@@ -3,5 +3,5 @@ data "aws_security_group" "expense_app_security_group" {
 }
 
 output "ID_of_Sec_Grp" {
-  value = data.aws_security_group.expense_app_security_group
+  value = data.aws_security_group.expense_app_security_group.id
 }
