@@ -16,7 +16,7 @@ variable "y_list" {
 variable "z" {
   default = {
     name = "gv"
-    age = 40
+    roll = 18
     height = 176
   }
 }
