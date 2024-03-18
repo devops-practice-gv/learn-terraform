@@ -54,7 +54,7 @@ output "catching_the_output_variable_from_TFVARS_file" {
   value = var.env
 }
 
-#demo of XXX.auto.tfvars file
+#demo of XXX.auto.tfvars file. Also if the name is terraform.auto.tfvars then you dont have to provide this file in the command line arguments
 
 variable "common" {}
 
