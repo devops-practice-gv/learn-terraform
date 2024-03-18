@@ -15,7 +15,7 @@ variable "y_list" {
 # Declare a map variable
 variable "z" {
   default = {
-    name = gv
+    name = "gv"
     age = 40
     height = 176
   }
