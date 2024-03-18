@@ -5,5 +5,9 @@ variable "x" {
 }
 
 # Declare a variable WITHOUT a value
-variable "y" {
+variable "y" {}
+
+# print the variable
+output "y" {
+  value = var.y
 }
