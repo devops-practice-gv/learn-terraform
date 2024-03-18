@@ -26,12 +26,20 @@ output "y" {
   value = var.y
 }
 
-# print the variable
+# print the list variable . It uses index [0] , [1] , [2]
 output "y_list_Output" {
   value = var.y_list
 }
 
-# print the variable
+output "y_list_Output_with_index" {
+  value = var.y_list[0]
+}
+
+# print the map variable. It has its own index [name] , [roll] ,[height]
 output "This_is_the_output_of_the_z_map" {
   value = var.z
+}
+
+output "This_is_the_output_of_the_z_map_with_Index" {
+  value = var.z["name"]
 }
