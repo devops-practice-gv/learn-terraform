@@ -32,6 +32,6 @@ output "y_list" {
 }
 
 # print the variable
-output "z" {
+output "This_is_the_output_of_the_map" {
   value = var.z
 }
