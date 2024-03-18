@@ -43,3 +43,12 @@ output "This_is_the_output_of_the_z_map" {
 output "This_is_the_output_of_the_z_map_with_Index" {
   value = var.z["name"]
 }
+
+#We can declare empty variable but data can be sent froma file, those files ar tfvars
+
+# Declare a variable WITHOUT a value
+variable "env" {}
+
+output "catching_the_output_variable_from_TFVARS_file" {
+  value = var.env
+}
