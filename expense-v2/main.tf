@@ -1,6 +1,6 @@
 resource "aws_instance" "frontend" {
   ami           = "ami"
-  instance_type = each.value[instance_type]
+  instance_type = each.value["instance_type"]
   tags = {
     Name        =  each.key
   }
