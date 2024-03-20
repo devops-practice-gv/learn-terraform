@@ -5,7 +5,7 @@ resource "aws_instance" "servers" {
   tags = {
     Name        =  each.key
   }
-  vpc_security_group_ids = ["security_group"]
+  vpc_security_group_ids = var.security_group
 
 }
 
