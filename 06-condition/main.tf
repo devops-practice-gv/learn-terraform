@@ -3,7 +3,7 @@
 resource "aws_instance" "Test1" {
   ami           = "ami-05f020f5935e52dc4"
 #  instance_type = var.instance_type == regex("^t2.*") ? "t3.micro" : var.instance_type
-  instance_type = regex(var.instance_type, "^t2.*") ? "t3.micro" : var.instance_type
+  instance_type = regex("^t2.*", var.instance_type) ? "t3.micro" : var.instance_type
 }
 
 # if the user give a option then use
