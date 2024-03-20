@@ -1,4 +1,4 @@
-resource "aws_instance" "frontend" {
+resource "aws_instance" "servers" {
   ami           = "ami"
   instance_type = each.value["instance_type"]
   tags = {
