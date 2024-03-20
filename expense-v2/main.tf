@@ -1,6 +1,6 @@
 resource "aws_instance" "servers" {
-  for_each = var.instance_type
-  ami           = "ami"
+  for_each      = var.instance_type
+  ami           = var.ami
   instance_type = each.value["instance_type"]
   tags = {
     Name        =  each.key
