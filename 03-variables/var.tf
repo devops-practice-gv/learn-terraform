@@ -9,7 +9,7 @@ variable "y" {}
 
 # Declare a list variable
 variable "y_list" {
-  default = [ 1,2,3]
+#  default = [ 1,2,3]
 }
 
 # Declare a map variable
