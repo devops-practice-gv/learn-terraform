@@ -9,7 +9,8 @@ variable "y" {}
 
 # Declare a list variable
 variable "y_list" {
-#  default = [ 1,2,3]
+  default = [ 1,2,3]
+#  type = list()
 }
 
 # Declare a map variable
@@ -31,9 +32,9 @@ output "y_list_Output" {
   value = var.y_list
 }
 
-#output "y_list_Output_with_index" {
-#  value = var.y_list[0]
-#}
+output "y_list_Output_with_index" {
+  value = var.y_list[0]
+}
 
 # print the map variable. It has its own index [name] , [roll] ,[height]
 output "This_is_the_output_of_the_z_map" {
