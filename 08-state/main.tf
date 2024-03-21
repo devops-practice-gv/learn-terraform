@@ -1,10 +1,13 @@
 terraform {
   backend "s3" {
-    bucket = "gv-tf-states"
-    key    = "testing/state"
-    region = "us-east-1"
+
   }
 }
 
 resource "null_resource" "test" {}
 resource "null_resource" "test1" {}
+
+
+variable "bucket" {}
+variable "key" {}
+variable "region" {}
