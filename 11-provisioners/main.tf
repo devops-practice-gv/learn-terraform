@@ -3,7 +3,7 @@ resource "aws_instance" "test_inst" {
   instance_type = "t3.small"
   vpc_security_group_ids = [data.aws_security_group.expense_app_security_group.id]
 
-  provisioner "Test Provisioner" {
+  provisioner "Test_Provisioner" {
     connection {
       type = "ssh"
       user = "ec2user"
