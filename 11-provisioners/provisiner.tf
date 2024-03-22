@@ -26,7 +26,7 @@ data "aws_security_group" "expense_app_security_group" {
 #outside of provisioner.
 # generic remote provisioners (i.e. file/remote-exec)
 
-resource "null_resource" "provisioner" {
+resource "null_resource" "test2" {
   provisioner "remote-exec" {
 
     connection {
@@ -37,7 +37,7 @@ resource "null_resource" "provisioner" {
     }
 
     inline = [
-      "dnf install nginx -y",
+      "sudo dnf install nginx -y",
       "sudo systemctl start nginx"
     ]
   }
