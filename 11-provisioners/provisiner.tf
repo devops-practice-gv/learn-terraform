@@ -26,17 +26,19 @@ data "aws_security_group" "expense_app_security_group" {
 #outside of provisioner.
 # generic remote provisioners (i.e. file/remote-exec)
 
-resource "null_resource" "dummy" {
+resource "null_resource" "provisioner" {
   provisioner "remote-exec" {
+
+    connection {
+      type     = "ssh"
+      user     = "ec2-user"
+      password = "DevOps321"
+      host     = aws_instance.test_inst.public_ip
+    }
+
     inline = [
-      "sudo dnf install nginx -y",
-      "sudo systemctl start nginx",
+      "dnf install nginx -y",
+      "sudo systemctl start nginx"
     ]
-  }
-  connection {
-    type = "ssh"
-    user = "ec2user"
-    password = "DevOps321"
-    host = aws_instance.test_inst.public_ip
   }
 }
