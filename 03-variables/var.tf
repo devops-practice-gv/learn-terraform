@@ -52,7 +52,7 @@ output "This_is_the_output_of_the_z_map_with_Index" {
 variable "env" {}
 
 output "catching_the_output_variable_from_TFVARS_file" {
-  value = var.env
+  value = "Entered value ${var.env} - ${upper(var.env)}"
 }
 
 #demo of XXX.auto.tfvars file. Also if the name is terraform.auto.tfvars then you dont have to provide this file in the command line arguments
