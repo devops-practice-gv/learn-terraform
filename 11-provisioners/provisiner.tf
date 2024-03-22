@@ -4,16 +4,16 @@ resource "aws_instance" "test_inst" {
   vpc_security_group_ids = [data.aws_security_group.expense_app_security_group.id]
 
   provisioner "remote-exec" {
-    connection {
-      type = "ssh"
-      user = "ec2user"
-      password = "DevOps321"
-      host = self.public_ip
-    }
     inline = [
       "sudo dnf install nginx -y",
       "sudo systemctl start nginx",
     ]
+  }
+  connection {
+    type = "ssh"
+    user = "ec2user"
+    password = "DevOps321"
+    host = self.public_ip
   }
 }
 
